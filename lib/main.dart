@@ -52,23 +52,66 @@ class _MyHomePageState extends State<MyHomePage> {
       ),
       body: Center(
         
-        child: Container(
-          height: double.infinity,
-          width: double.infinity,
-          margin: EdgeInsets.all(50.0),
-          decoration: BoxDecoration(
-            borderRadius: BorderRadius.circular(25.0),
-            color: Colors.red,
-          ),
-          child: Text(
-            'hello',
-            style: TextStyle(
-              fontSize: 24,
-              color: Colors.white
+        child: Column(
+          children: [
+            Container(
+              height: 300.0,
+              width: double.infinity,
+              margin: EdgeInsets.all(30.0),
+              padding: EdgeInsets.all(20.0),
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(15.0),
+                color: const Color.fromARGB(255, 198, 86, 86),
+              ),
+              child: Text(
+                'text to sign',
+                style: TextStyle(
+                  fontSize: 24,
+                  color: Colors.white
+                ),
+              ),
+            
+              
             ),
-          ),
-
-          
+            Container(
+              height: 300.0,
+              width: double.infinity,
+              margin: EdgeInsets.all(30.0),
+              padding: EdgeInsets.all(20.0),
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(15.0),
+                color: Colors.lightBlue,
+              ),
+              child: Text(
+                'sign to sign',
+                style: TextStyle(
+                  fontSize: 24,
+                  color: Colors.white
+                ),
+              ),
+            
+              
+            ),
+            Container(
+              height: 300.0,
+              width: double.infinity,
+              margin: EdgeInsets.all(30.0),
+              padding: EdgeInsets.all(20.0),
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(15.0),
+                color: Colors.lightGreen,
+              ),
+              child: Text(
+                'sign to text',
+                style: TextStyle(
+                  fontSize: 24,
+                  color: Colors.white
+                ),
+              ),
+            
+              
+            ),
+          ],
         ),
       ),
       floatingActionButton: FloatingActionButton(
