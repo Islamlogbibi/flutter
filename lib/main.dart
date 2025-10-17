@@ -53,47 +53,50 @@ class _MyHomePageState extends State<MyHomePage> {
       body: Center(
         
         child: Column(
+
+          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: [
-            Container(
-              height: 300.0,
-              width: double.infinity,
-              margin: EdgeInsets.all(30.0),
-              padding: EdgeInsets.all(20.0),
-              decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(15.0),
-                color: const Color.fromARGB(255, 198, 86, 86),
-              ),
-              child: Text(
-                'text to sign',
-                style: TextStyle(
-                  fontSize: 24,
-                  color: Colors.white
-                ),
-              ),
+            
+            // Container(
+            //   height: 150.0,
+            //   width: double.infinity,
+            //   margin: EdgeInsets.all(30.0),
+            //   padding: EdgeInsets.all(20.0),
+            //   decoration: BoxDecoration(
+            //     borderRadius: BorderRadius.circular(15.0),
+            //     color: const Color.fromARGB(255, 198, 86, 86),
+            //   ),
+            //   child: Text(
+            //     'text to sign',
+            //     style: TextStyle(
+            //       fontSize: 24,
+            //       color: Colors.white
+            //     ),
+            //   ),
             
               
-            ),
-            Container(
-              height: 300.0,
-              width: double.infinity,
-              margin: EdgeInsets.all(30.0),
-              padding: EdgeInsets.all(20.0),
-              decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(15.0),
-                color: Colors.lightBlue,
-              ),
-              child: Text(
-                'sign to sign',
-                style: TextStyle(
-                  fontSize: 24,
-                  color: Colors.white
-                ),
-              ),
+            // ),
+            // Container(
+            //   height: 150.0,
+            //   width: double.infinity,
+            //   margin: EdgeInsets.all(30.0),
+            //   padding: EdgeInsets.all(20.0),
+            //   decoration: BoxDecoration(
+            //     borderRadius: BorderRadius.circular(15.0),
+            //     color: Colors.lightBlue,
+            //   ),
+            //   child: Text(
+            //     'sign to sign',
+            //     style: TextStyle(
+            //       fontSize: 24,
+            //       color: Colors.white
+            //     ),
+            //   ),
             
               
-            ),
+            // ),
             Container(
-              height: 300.0,
+              height: 150.0,
               width: double.infinity,
               margin: EdgeInsets.all(30.0),
               padding: EdgeInsets.all(20.0),
@@ -102,7 +105,7 @@ class _MyHomePageState extends State<MyHomePage> {
                 color: Colors.lightGreen,
               ),
               child: Text(
-                'sign to text',
+                'Mobile Dev L3 2025',
                 style: TextStyle(
                   fontSize: 24,
                   color: Colors.white
@@ -114,11 +117,13 @@ class _MyHomePageState extends State<MyHomePage> {
           ],
         ),
       ),
-      floatingActionButton: FloatingActionButton(
-        onPressed: _incrementCounter,
-        tooltip: 'Increment',
-        child: const Icon(Icons.add),
-      ),
+      // floatingActionButton: FloatingActionButton(
+      //   onPressed: _incrementCounter,
+      //   tooltip: 'Increment',
+      //   child: const Icon(Icons.add),
+      // ),
     );
   }
 }
+
+//
