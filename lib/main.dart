@@ -4,55 +4,39 @@ void main() {
   runApp(const MyApp());
 }
 
-class MyApp extends StatelessWidget {
+class MyApp extends StatefulWidget {
   const MyApp({super.key});
 
+  @override
+  State<MyApp> createState() => _MyAppState();
+}
+
+class _MyAppState extends State<MyApp> {
+  int selectedIndex = 0;
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(
-          seedColor: Colors.teal,
-          brightness: Brightness.dark,
-        ),
+        colorScheme: ColorScheme.fromSeed(seedColor: Colors.teal, brightness: Brightness.dark,),
+        
       ),
       home: Scaffold(
-        appBar: AppBar(title: Text("flutter Mapp"), centerTitle: true),
-        // drawer: Drawer(
-        //   child: Column(
-        //     children: [
-              
-        //       ListTile(title: Text('logout'),),
-        //       ListTile(title: Text('settings'),),
-        //       ListTile(title: Text('profile'),),
-        //     ],
-        //   ),
-        // ),
-        floatingActionButton: Row(
-          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-          children: [
-            FloatingActionButton(
-              onPressed: () {},
-              child: Icon(Icons.add),
-            ),
-            FloatingActionButton(
-              onPressed: () {},
-              child: Icon(Icons.remove),
-            ),
-            FloatingActionButton(
-              onPressed: () {},
-              child: Icon(Icons.restore),
-            ),
-          ],
-        ),
+        appBar: AppBar(title: Text("Flutter App")),
+        body: selectedIndex == 0
+            ? Center(child: Text("Home Screen", style: TextStyle(fontSize: 24)))
+            : Center(child: Text("Profile Screen", style: TextStyle(fontSize: 24))),
         bottomNavigationBar: NavigationBar(
           destinations: [
             NavigationDestination(icon: Icon(Icons.home), label: 'Home'),
             NavigationDestination(icon: Icon(Icons.person), label: 'Profile'),
           ],
-          onDestinationSelected: (int value) {},
-          selectedIndex: 0,
+          onDestinationSelected: (int value) {
+            setState(() {
+              selectedIndex = value;
+            });
+          },
+          selectedIndex: selectedIndex,
         ),
       ),
     );
